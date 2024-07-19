@@ -16,7 +16,7 @@ class InvoiceController
     {
         $invoices = $this->invoice->getAll();
         return [
-            'status' => 'succès',
+            'status' => 'success',
             'data' => $invoices,
             'message' => 'Les factures ont été récupérées avec succès!'
         ];
@@ -27,7 +27,7 @@ class InvoiceController
         $invoice = $this->invoice->get($id);
         if ($invoice) {
             return [
-                'status' => 'succès',
+                'status' => 'success',
                 'data' => $invoice,
                 'message' => 'La facture a été récupérée avec succès!'
             ];
@@ -44,7 +44,7 @@ class InvoiceController
         $result = $this->invoice->create($data);
         if ($result) {
             return [
-                'status' => 'succès',
+                'status' => 'success',
                 'message' => 'La facture a été créée avec succès!'
             ];
         } else {
@@ -60,7 +60,7 @@ class InvoiceController
         $result = $this->invoice->update($id, $data);
         if ($result) {
             return [
-                'status' => 'succès',
+                'status' => 'success',
                 'message' => 'La facture a été mise à jour avec succès!'
             ];
         } else {
@@ -76,7 +76,7 @@ class InvoiceController
         $result = $this->invoice->delete($id);
         if ($result) {
             return [
-                'status' => 'succès',
+                'status' => 'success',
                 'message' => 'La facture a été supprimée avec succès!'
             ];
         } else {
