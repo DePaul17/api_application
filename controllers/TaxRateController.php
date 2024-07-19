@@ -45,7 +45,7 @@ class TaxRateController
         if ($result) {
             return [
                 'status' => 'success',
-                'message' => 'taux de hache créé avec succès!'
+                'message' => 'taux de taxe créé avec succès!'
             ];
         } else {
             return [
