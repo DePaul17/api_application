@@ -16,7 +16,7 @@ class InvoiceItemController
     {
         $invoiceItems = $this->invoiceItem->getAll();
         return [
-            'status' => 'succès',
+            'status' => 'success',
             'data' => $invoiceItems,
             'message' => 'Les éléments de facture ont été récupérés avec succès!'
         ];
@@ -27,7 +27,7 @@ class InvoiceItemController
         $invoiceItem = $this->invoiceItem->get($id);
         if ($invoiceItem) {
             return [
-                'status' => 'succès',
+                'status' => 'success',
                 'data' => $invoiceItem,
                 'message' => 'L\'élément de facture a été récupéré avec succès!'
             ];
@@ -44,7 +44,7 @@ class InvoiceItemController
         $result = $this->invoiceItem->create($data);
         if ($result) {
             return [
-                'status' => 'succès',
+                'status' => 'success',
                 'message' => 'L\'élément de facture a été créé avec succès!'
             ];
         } else {
@@ -60,7 +60,7 @@ class InvoiceItemController
         $result = $this->invoiceItem->update($id, $data);
         if ($result) {
             return [
-                'status' => 'succès',
+                'status' => 'success',
                 'message' => 'L\'élément de facture a été mis à jour avec succès!'
             ];
         } else {
@@ -76,7 +76,7 @@ class InvoiceItemController
         $result = $this->invoiceItem->delete($id);
         if ($result) {
             return [
-                'status' => 'succès',
+                'status' => 'success',
                 'message' => 'L\'élément de facture a été supprimé avec succès!'
             ];
         } else {
